@@ -1,0 +1,101 @@
+/* Design tokens — single source of truth for all visual values */
+
+:root {
+  /* ─── Typography ────────────────────────────────────────── */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'Courier New', monospace;
+
+  --font-size-xs: clamp(0.694rem, 0.67vw + 0.58rem, 0.75rem);
+  --font-size-sm: clamp(0.833rem, 0.42vw + 0.73rem, 0.875rem);
+  --font-size-base: clamp(1rem, 0.5vw + 0.875rem, 1rem);
+  --font-size-md: clamp(1rem, 0.75vw + 0.85rem, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1vw + 0.9rem, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.5vw + 0.95rem, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 2vw + 1rem, 2rem);
+  --font-size-3xl: clamp(1.875rem, 3vw + 1rem, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 4vw + 1rem, 3rem);
+  --font-size-5xl: clamp(2.75rem, 5vw + 1.25rem, 4rem);
+
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* ─── Colors (light theme) ──────────────────────────────── */
+  --color-bg: #fafafa;
+  --color-bg-subtle: #f4f4f5;
+  --color-bg-muted: #e4e4e7;
+  --color-fg: #09090b;
+  --color-fg-muted: #52525b;
+  --color-fg-subtle: #a1a1aa;
+  --color-border: #e4e4e7;
+  --color-border-strong: #d4d4d8;
+
+  /* Electric blue accent — verified AA contrast on both themes */
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-subtle: #dbeafe;
+
+  --color-focus: #3b82f6;
+
+  /* ─── Spacing (4px base scale) ──────────────────────────── */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem; /* 2px  */
+  --space-1: 0.25rem; /* 4px  */
+  --space-2: 0.5rem; /* 8px  */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
+  --space-32: 8rem; /* 128px */
+
+  /* ─── Layout ────────────────────────────────────────────── */
+  --content-max: 72ch;
+  --page-padding-x: clamp(1rem, 4vw, 2rem);
+  --page-padding-y: clamp(2rem, 6vw, 4rem);
+
+  /* ─── Borders ───────────────────────────────────────────── */
+  --border-hairline: 0.5px;
+  --border-thin: 1px;
+  --radius-none: 0;
+  --radius-sm: 2px;
+
+  /* ─── Focus ─────────────────────────────────────────────── */
+  --focus-ring: 2px solid var(--color-focus);
+  --focus-ring-offset: 3px;
+
+  /* ─── Motion ────────────────────────────────────────────── */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #09090b;
+    --color-bg-subtle: #18181b;
+    --color-bg-muted: #27272a;
+    --color-fg: #fafafa;
+    --color-fg-muted: #a1a1aa;
+    --color-fg-subtle: #71717a;
+    --color-border: #27272a;
+    --color-border-strong: #3f3f46;
+
+    --color-accent: #60a5fa;
+    --color-accent-hover: #93c5fd;
+    --color-accent-subtle: #1e3a5f;
+
+    --color-focus: #60a5fa;
+  }
+}
