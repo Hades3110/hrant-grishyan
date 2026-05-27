@@ -60,6 +60,7 @@ a:hover {
 }
 
 /* ─── Focus ─────────────────────────────────────────────────── */
+/* Suppress the default ring on pointer/touch; :focus-visible below restores it for keyboard nav */
 :focus {
   outline: none;
 }

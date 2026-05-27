@@ -1,8 +1,13 @@
+import { Hero } from '@/app/sections/hero/Hero';
+import { Footer } from '@/app/components/footer/Footer';
+
 export default function HomePage() {
   return (
-    <main>
-      <h1>Hrant Grishyan</h1>
-      <p>Senior Frontend Engineer</p>
-    </main>
+    <>
+      <main>
+        <Hero />
+      </main>
+      <Footer />
+    </>
   );
 }
