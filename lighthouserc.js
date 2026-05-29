@@ -7,15 +7,12 @@ module.exports = {
       url: ['http://localhost:3000'],
       numberOfRuns: 3,
       settings: {
-        // Required for LCP/TBT trace collection in headless Chrome on Linux CI
-        chromeFlags: '--no-sandbox --disable-dev-shm-usage',
+        chromeFlags: '--no-sandbox --disable-dev-shm-usage --headless=new',
       },
     },
     assert: {
       assertions: {
-        // Performance score requires LCP/TBT trace — measured reliably on Linux CI only.
-        // Local macOS headless Chrome cannot collect these traces (known environment limitation).
-        'categories:performance': ['warn', { minScore: 1 }],
+        'categories:performance': ['error', { minScore: 0.9 }],
         'categories:accessibility': ['error', { minScore: 1 }],
         'categories:best-practices': ['error', { minScore: 1 }],
         'categories:seo': ['error', { minScore: 1 }],

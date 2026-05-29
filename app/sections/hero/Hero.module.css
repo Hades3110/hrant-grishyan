@@ -9,15 +9,13 @@
 }
 
 /* ─── Stagger-reveal animation ──────────────────────────────── */
-/* animation-fill-mode: both ensures the final frame is held even when
-   prefers-reduced-motion collapses the duration to 0.01ms */
+/* opacity:0 in "from" causes NO_LCP — Chrome can't find a visible candidate; translateY-only keeps elements visible for LCP measurement */
+/* animation-fill-mode: both holds the final frame when prefers-reduced-motion collapses duration to 0.01ms */
 @keyframes fade-rise {
   from {
-    opacity: 0;
     transform: translateY(6px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
