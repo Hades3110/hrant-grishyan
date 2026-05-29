@@ -1,8 +1,13 @@
 /* ─── Container ─────────────────────────────────────────────── */
 .hero {
-  max-width: var(--content-max);
-  margin-inline: auto;
   padding: var(--page-padding-y) var(--page-padding-x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* ─── Copy block ────────────────────────────────────────────── */
+.copy {
   display: flex;
   flex-direction: column;
   gap: var(--space-8);
@@ -55,20 +60,20 @@
 
 /* ─── Headline ──────────────────────────────────────────────── */
 /* h1 inherits font-mono from globals.css; we set size and weight here */
+/* clamp targets ~40px at 1440px (2 lines) and ~34px at 900px (3 lines) */
 .headline {
-  font-size: clamp(1.75rem, 4vw + 0.75rem, 2.75rem);
+  font-size: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem);
   line-height: var(--line-height-snug);
   font-weight: var(--font-weight-semibold);
   color: var(--color-fg);
-  max-width: 22ch;
 }
 
 /* ─── Intro ─────────────────────────────────────────────────── */
 .intro {
   font-size: var(--font-size-md);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-fg-muted);
-  max-width: 60ch;
+  line-height: 1.5;
+  color: var(--color-fg);
+  max-width: var(--content-max);
 }
 
 /* ─── CTA actions ───────────────────────────────────────────── */
